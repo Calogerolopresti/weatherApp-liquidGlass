@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    color: rgb(253, 253, 253);
+}
+
+
+body {
+    background-image: url('img/sfondo.png');
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-bottom: 500px;
+}
+
+nav {
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    font-size: 25px;
+    align-items: center;
+}
+
+.logo {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
+
+.input-glass {
+    background: rgba(255, 255, 255, 0.029);
+
+    /* L'effetto sfocatura */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Per supporto Safari */
+
+    /* Estetica moderna */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 12px 20px;
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    height: 40px;
+    font-size: 20px;
+    margin-right: 105px;
+}
+
+.input-glass:focus {
+    border-color: rgba(0, 255, 255, 0.5);
+    /* Accento Ciano */
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.input-glass::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+main {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.blur {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    padding: 20px;
+}
+
+#todayIcon {
+    height: 150px;
+}
+
+#todayDegrees {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+#todayDetails {
+    margin-left: 30px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    /* Colore Ciano del mockup */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom-left-radius: 8px;
+    /* Opzionale: arrotonda l'angolo */
+
+}
+
+#todayDetails>p {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#geo {
+    margin-left: 7%;
+}
+
+#geo>h6 {
+    color: rgb(27, 230, 235);
+}
+
+#iconNextWeather {
+    height: 100px;
+}
+
+footer {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.underCard {
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.underCard>img {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.contenitore {
+    display: none;
+}
+
+table {
+    margin: 30px auto;
+    border: none !important;
+}
+
+table img {
+    height: 30px;
+}
+
+td {
+    padding: 20px;
+}
+
+
+
+
+/* Nascondi l'elemento sopra i 1020px */
+@media (min-width: 1040px) {
+    .show-1020 {
+        display: none !important;
+    }
+
+    table {
+        display: none !important;
+    }
+}
+
+/* Opzionale: assicuratevi che sia visibile sotto i 1020px */
+@media (max-width: 1020px) {
+    .show-1020 {
+        display: block !important;
+    }
+}
+
+/* Quando lo schermo è da 1020px in GIÙ */
+@media (max-width: 1040px) {
+    main {
+        display: none !important;
+    }
+
+    .noShow {
+        display: none !important;
+    }
+}
+
+@media(max-width: 576px) {
+    .input-glass {
+        margin: 0 auto;
+    }
+}
+
+.prova {
+    display: none !important;
+}
+
+.window {
+    position: fixed;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.window>h6 {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.window-left>img {
+    height: 130px;
+}
+
+.window-left>p {
+    color: rgb(27, 230, 235);
+}
+
+.window-right img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+.window-right div {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 11px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.window button {
+    margin: 0 auto;
+    width: 100px;
+    border: 1px solid rgb(27, 230, 235);
+    padding: 10px !important;
+}
+
+.window button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.cliccabile:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
