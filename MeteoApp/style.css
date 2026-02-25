@@ -177,6 +177,12 @@ td {
     }
 }
 
+@media (max-width:767px){
+    .window{
+        width: 350px !important;
+    }
+}
+
 @media(max-width: 576px) {
     .input-glass {
         margin: 0 auto;
@@ -237,4 +243,9 @@ td {
 .cliccabile:hover {
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
+}
+
+tr:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
 }

@@ -119,6 +119,7 @@ async function fetchWeatherByCity(cityName) {
         pressure.innerHTML = `Pressure ${pressureData} hPa`;
         city.innerHTML = `${town}`;
         detail.innerHTML = `${iconDescription}`;
+        nameCity.innerHTML = `${town}`;
 
         // Recupera i dati del forecast a 4 giorni
         await fetchForecastByCity(cityName);
@@ -196,6 +197,16 @@ async function fetchAndPopulateForecast(endpoint) {
                 windowElement.style.display = 'block';
             });
         });
+
+        // Aggiungi evento click per le righe della tabella
+        for (let i = 0; i < 16; i++) {
+            const tableRow = document.querySelector(`#tableDay${i + 1}`).parentElement;
+            tableRow.addEventListener('click', () => {
+                populateWindowCard(dataForecast.list[i]);
+                const windowElement = document.querySelector('#windowCard');
+                windowElement.style.display = 'block';
+            });
+        }
     } catch (error) {
         console.error('Errore durante il recupero del forecast:', error);
     }
